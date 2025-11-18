@@ -1,24 +1,28 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/java-postgres
 {
-	"name": "Java & PostgreSQL",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "name": "Quarkus Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "quarkus",
+  "workspaceFolder": "/workspace",
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {}
+  "runServices": ["db", "quarkus"],
+  "shutdownAction": "stopCompose",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// This can be used to network with other containers or with the host.
-	"forwardPorts": [5432, 8080],
+  "forwardPorts": [8080],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
+  "postCreateCommand": "mvn -q -DskipTests clean install",
 
-	// Configure tool-specific properties.
-	// "customizations": {},
+  "remoteUser": "root",
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "root"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "redhat.vscode-quarkus",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test"
+      ]
+    }
+  }
 }
