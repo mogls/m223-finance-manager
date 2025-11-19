@@ -9,19 +9,4 @@ public class CategoryDTO {
         this.categoryType = categoryType;
     }
 
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public String getCategoryType() {
-        return categoryType;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public void setCategoryType(String categoryType) {
-        this.categoryType = categoryType;
-    }
 }

@@ -12,36 +12,4 @@ public class AccountDTO {
         this.balance = balance;
         this.userId = userId;
     }
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public String getAccountType() {
-        return accountType;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
 }
